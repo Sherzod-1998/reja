@@ -1,0 +1,486 @@
+.frame {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    background: #e5e5e5
+}
+
+.frame .main_frame {
+    position: relative;
+    width: 1440px;
+    height: 1312px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 2px;
+    /* background: #f7f6b9; */
+}
+
+.main_frame .left_frame {
+    position: relative;
+    width: 305px;
+    height: 1315px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.main_frame .left_1 {
+    position: relative;
+    width: 228px;
+    height: 267px;
+    margin-top: 50px;
+    margin-left: 37px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: aqua; */
+}
+
+.main_frame .left_1 .left_1-1g {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    width: 156.16px;
+    height: 142.53px;
+    margin-bottom: 29.46px;
+}
+
+.main_frame .marginer {
+    position: relative;  
+    width: 220px;
+    height: 0px;
+    margin-left: 40px;
+    margin-bottom: 25px;
+    margin-top: 39px;
+    /* Background */
+    border: 1.5px solid #f0f0f6;
+}
+/* ================About=================== */
+/* ================About=================== */
+.about{
+    width: 221px;
+    height: 80px;
+    top: 381px;
+    left: 40px;
+    gap: 0px;
+    opacity: 0px;
+    /* background-color: red; */
+    margin-left: 45px;
+
+}
+
+.about-age{
+    width: 221px;
+    height: 25px;
+    top: 381px;
+    left: 40px;
+    display: flex; /* Flexboxni yoqadi */
+    flex-direction: row; /* Elementlarni gorizontal joylashtiradi (default qiymat) */
+    justify-content: space-between;
+    padding: 2px;
+      
+
+}
+.about-age-age {
+    width: 33.15px;
+    height: 24px;
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    background-color: #FFB400;
+}
+
+.about-age-24{
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: right;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.about-age-rectangle{
+    width: 46.21px;
+    height: 24px;
+    top: 381px;
+    left: 40px;
+    background: #FFB400;
+    display: flex; /* Flexboxni yoqadi */
+    justify-content: center; /* Gorizontal markazlash */
+    align-items: center;
+
+
+}
+
+.about-residence{
+    width: 221px;
+    height: 25px;
+    top: 381px;
+    left: 40px;
+    display: flex; /* Flexboxni yoqadi */
+    flex-direction: row; /* Elementlarni gorizontal joylashtiradi (default qiymat) */
+    justify-content: space-between;
+    padding: 2px;
+}
+
+.about-residence-rectangle{
+    width: 80.21px;
+    height: 24px;
+    top: 381px;
+    left: 40px;
+    background: #FFB400;
+    display: flex; /* Flexboxni yoqadi */
+    justify-content: center; /* Gorizontal markazlash */
+    align-items: center;
+}
+
+  
+
+
+
+/* ================About=================== */
+/* ================About=================== */
+
+
+
+.left_1-2 {
+    position: relative;
+    width: 66.63px;
+    height: 20.9px;
+    margin-bottom: 6.65px;
+    /* H4 - 18px */
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 123.6%;
+    /* or 22px */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-transform: capitalize;
+    /* Black */
+    color: #2b2b2b;
+}
+
+.main_frame .left_frame .left_1-3 {
+    position: relative;
+    width: 147.84px;
+    height: 25.65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    /* Paragraph Progress - 15 */
+
+    font-family: sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 24px;
+     /* or 160% */
+
+    text-transform: capitalize;
+    font-feature-settings: 'calt' off, 'kern' off;
+
+    /* Paragraph Font */
+
+    color: #767676;
+}
+
+.left-icons {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    width: 238px;
+    margin-top: 19px;
+}
+
+
+.link_href{
+    text-decoration: none;
+    color: black;
+}
+
+.icon {
+    position: relative;
+    width: 24.99px;
+    height: 22.8px;
+    border-radius: 50%;
+    filter: drop-shadow(0 4px 4px rgba(0, 0, 0, 0.25));
+    /* Yellow */
+    background: #ffb400;
+}
+
+.icon-1 {
+    position: relative;
+    left:0%;
+    right: 0%;
+    /* margin-top: 3.86px; */
+}
+
+/* ===========Languages================== */
+/* ===========Languages================== */
+.main_frame .left_frame  .left_3 {
+    position: relative;
+    width: 220px;
+    height: 153px;
+    margin-left: 45px;
+}
+
+.left_3-line{
+    width: 220px;
+    height: 4px;
+    top: 623px;
+    left: 40px;
+    gap: 0px;
+    border-radius: 30px 0px 0px 0px;
+    opacity: 0px;
+
+
+}
+
+.rectangle-6{
+    width: 220px;
+    height: 4px;
+    top: 665px;
+    left: 40px;
+    border: 0.5px 0px 0px 0px;
+    border: 0.5px solid #FFB400
+}
+
+.rectangle-7{
+    margin-top: 1px;
+    height: 2px;
+    border-radius: 30px 0px 0px 0px;
+    background: #FFB400;
+
+}
+
+.languages{
+    margin-bottom: 10;
+}
+
+.ikki-tarafga {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.lang{
+    font-family: Inter;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: left;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #767676;
+
+
+}
+
+
+/* ===========Languages================== */
+/* ===========Languages================== */
+/* ============Skills =====================*/
+/* ============Skills =====================*/
+.main_frame .left_frame  .left_4 {
+    position: relative;
+    width: 220px;
+    height: 242;
+    margin-left: 45px;
+}
+
+
+/* ============Skills =====================*/
+/* ============Skills =====================*/
+.left_5 {
+    position: relative;
+    width: 186px;
+    height: 130px;
+    margin-left: 45px;
+}
+
+.icon-2 {
+    width: 15px;
+    height: 15px;
+    top: 1093px;
+    left: 40px;
+    margin-right: 10px;
+}
+
+.download{
+    position: relative;
+    width: 186px;
+    height: 148;
+    margin-left: 45px;
+}
+
+/* =================================== */
+
+.main_frame .midd_frame {
+    position: relative;
+    width: 970px;
+    height: 1259px;
+    margin-left: 30px;
+    margin-right: 27px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.main-menu {
+    width: 970px;
+    height: 467.09px;
+    left: 335px;
+    background-image: url(./author/box_images/Background\ Image.png); /* Rasmni manzilini ko‘rsatish */
+    background-size: cover; /* Rasmni konteynerga to‘liq moslashtirish */
+    background-repeat: no-repeat; /* Takrorlanishni o‘chirish */
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.doctor-text {
+    width: 500px;
+    height: 118px;
+    top: 93px;
+    left: 395px;
+}
+
+.text{
+    font-family: Inter;
+    font-size: 50px;
+    font-weight: 700;
+    line-height: 59.33px;
+}
+
+.lorem{
+    width: 424px;
+    height: 88px;
+    top: 229px;
+    left: 395px;
+    margin-top: 30px;
+}
+
+.lorem-text {
+font-family: Inter;
+font-size: 20px;
+font-weight: 400;
+line-height: 24px;
+text-align: left;
+text-underline-position: from-font;
+text-decoration-skip-ink: none;
+color: #767676;
+
+}
+
+.doctor-image{
+    margin-top: 10px;
+}
+
+.bottom-menu {
+    width: 970px;
+    height: 653px;
+    /* top: 606px;
+    left: 335px; */
+    /* display: flex;
+    justify-content: center; */
+}
+.container {
+    width: 950px; /* Konteynerning kengligi */
+    height: 500px; /* Konteynerning balandligi */
+    display: grid; /* Grid layoutni yoqamiz */
+    grid-template-columns: repeat(3, 310px); /* Uchta ustun */
+    grid-template-rows: repeat(2, 225px); /* Ikki qator */
+    gap: 10px; /* Rectangle'lar orasidagi bo'sh joy */
+    /* margin: 0 auto; Markazlashtirish */
+    padding: 10px; /* Ichki bo'sh joy (ixtiyoriy) */
+}
+
+.rectangle {
+    background-color: white; /* Oq fon */
+    border: 1px solid #ccc; /* Yengil chegara */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Yengil soya */
+    display: flexbox;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center; /* Vertikal markazlash */
+    text-align: center;
+}
+
+.line-1 {
+    font-family: Inter;
+    font-size: 18px;
+    font-weight: 500;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #2B2B2B;
+}
+
+.line-2 {
+    margin-top: 20px;
+    font-family: Inter;
+    font-size: 15px;
+    text-align: center;
+    color: #767676;
+}
+.order {
+    margin-top: 40px;
+    font-family: Roboto;
+    font-size: 12px;
+    font-weight: 700;
+    line-height: 14.06px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    color: #FFB400;
+}
+
+/* ======================== */
+.main_frame .right_frame {
+    position: relative;
+    width: 108px;
+    height: 1315px;
+
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contrast {
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+    top: 50px;
+    left: 1371px;
+
+}
+
+.right-icons {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    width: 65px;
+    height: 493px;
+    margin-top: 200px;
+}
+.right-icon {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 10px;
+    
+}

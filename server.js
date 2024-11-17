@@ -18,7 +18,7 @@ app.use(express.static("public")); // Static fayllar uchun papka
 app.use(express.json()); // JSON formatidagi ma'lumotlarni o'qish
 app.use(express.urlencoded({ extended: true })); // URL encoded ma'lumotlarni o'qish
 
-// 2: Session code (bu yerda session middleware bo'lsa qo'shish mumkin)
+// 2: Session code (bu yerda session middle  ware bo'lsa qo'shish mumkin)
 
 // 3: Views konfiguratsiyasi
 app.set("views", "views");
@@ -26,7 +26,7 @@ app.set("view engine", "ejs");
 
 // 4: Routing
 app.post("/creatr-item", (req, res) => {
-    //TODO: code with db here
+    //TODO: code with db
 });
 
 app.get('/author' , (req, res) =>{
