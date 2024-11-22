@@ -1,19 +1,74 @@
+// B-TASK:
+/*
+Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha 
+stringda qatnashgan raqamlarni sonini bizga return qilsin.
+MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
+ */
+
+//Define
+function countDigits(str) {
+    let arr = str.split("");
+    const raqam = arr.filter((ele) => {
+        return ele == 0 || 
+        ele == 1 || 
+        ele == 2 || 
+        ele == 3 || 
+        ele == 4 || 
+        ele == 5 || 
+        ele == 6 || 
+        ele == 7 || 
+        ele == 8 || 
+        ele == 9;
+      });
+    console.log("Raqam",raqam.length);
+
+};
+
+//Call
+countDigits("ad2a54y79wet0sfgb9");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // A-TASK:
 
 // Shunday 2 parametrli function tuzing, hamda birinchi parametrdagi letterni 
 // ikkinchi parametrdagi sozdan qatnashga sonini return qilishi kerak boladi.
 // MASALAN countLetter("e", "engineer") 3ni return qiladi.
 
-function harfSana(letter, word) {
-    let count = 0;
-    word.split("").forEach(ele => {
-        if (ele === letter) {
-            count+=1;
-        }
-    });
-    return count;
-}
-console.log(harfSana("e", "engineer")); 
+// function harfSana(letter, word) {
+//     let count = 0;
+//     word.split("").forEach(ele => {
+//         if (ele === letter) {
+//             count+=1;
+//         }
+//     });
+//     return count;
+// }
+// console.log(harfSana("e", "engineer")); 
 
 
 // console.log("Jack Ma maslahatlari");

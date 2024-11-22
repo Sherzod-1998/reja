@@ -34,7 +34,7 @@ app.get('/author' , (req, res) =>{
 })
 
 app.get("/", function(req, res){
-    res.render("harid");
+    res.render("reja");
 });
 
 
@@ -42,5 +42,5 @@ app.get("/", function(req, res){
 const server = http.createServer(app);
 let PORT = 3000;
 server.listen(PORT, function () {
-    console.log(`Server muvaffaqiyatli ishga tushdi. Port: ${PORT}`);
+    console.log(`Server muvaffaqiyatli ishga tushdi. Port: ${PORT},  http://localhost:${PORT}`);
 });
