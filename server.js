@@ -1,46 +1,24 @@
-// Web Serverni boshlash
-console.log("Web Serverni boshlash");
-const express = require("express");
-const app = express();
 const http = require("http");
-const fs = require("fs");
 
-let user;
-fs.readFile("database/user.json", "utf8", (err, data) => {
-    if (err) {
-        console.log("ERROR:", err);
-    } else {
-        user = JSON.parse(data);
+const { MongoClient } = require('mongodb');
+
+let db;
+const connectionString = 
+"mongodb+srv://colin:X8UYACIH3RirRl6r@cluster0.y5urj.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+
+
+MongoClient.connect(connectionString, (err, client) =>{
+    if(err) console.log("ERROR on connection MongoDB");
+    else{
+        console.log("MongoDB ulandi");
+        module.exports = client;
+        module.exports.db = () => db;
+        const app = require("./app");
+        const server = http.createServer(app);
+        let PORT = 3000;
+        server.listen(PORT, function () {
+            console.log(`Server muvaffaqiyatli ishga tushdi. Port: ${PORT},  http://localhost:${PORT}`);
+        });
     }
 });
 
-app.use(express.static("public")); // Static fayllar uchun papka
-app.use(express.json()); // JSON formatidagi ma'lumotlarni o'qish
-app.use(express.urlencoded({ extended: true })); // URL encoded ma'lumotlarni o'qish
-
-// 2: Session code (bu yerda session middle  ware bo'lsa qo'shish mumkin)
-
-// 3: Views konfiguratsiyasi
-app.set("views", "views");
-app.set("view engine", "ejs");
-
-// 4: Routing
-app.post("/creatr-item", (req, res) => {
-    //TODO: code with db
-});
-
-app.get('/author' , (req, res) =>{
-    res.render("author", {user: user});
-})
-
-app.get("/", function(req, res){
-    res.render("reja");
-});
-
-
-// Server yaratish va tinglash
-const server = http.createServer(app);
-let PORT = 3000;
-server.listen(PORT, function () {
-    console.log(`Server muvaffaqiyatli ishga tushdi. Port: ${PORT},  http://localhost:${PORT}`);
-});
