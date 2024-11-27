@@ -1,3 +1,124 @@
+// C-TASK;
+/**
+ Shunday class tuzing tuzing nomi Shop, va uni constructoriga 
+ 3 hil mahsulot pass bolsin, hamda classning 3ta methodi bolsin,
+  biri qoldiq, biri sotish va biri qabul. Har bir method ishga tushgan
+   vaqt ham log qilinsin.
+MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta non, 5ta lagmon va 2ta cola mavjud! shop.sotish('non', 3) & shop.qabul('cola', 4) & shop.qoldiq() return hozir 20:50da 1ta non, 5ta lagmon va 6ta cola mavjud!
+
+ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+class Shop {
+  constructor(non, lagmon, cola) {
+    this.products = {
+      non: non,       
+      lagmon: lagmon, 
+      cola: cola
+    };
+  }
+
+  qoldiq() {
+    const now = new Date();
+    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+    return `Hozir ${time}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`;
+  }
+
+  sotish(productName, quantity) {
+    this.products[productName] -= quantity;
+    const now = new Date();
+    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+    return `Hozir ${time}da ${quantity}ta ${productName} sotildi. Qoldiq: ${this.products[productName]}ta.`;
+  }
+
+  qabul(productName, quantity) {
+    this.products[productName] += quantity;
+    const now = new Date();
+    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+    return `Hozir ${time}da ${quantity}ta ${productName} qabul qilindi. Qoldiq: ${this.products[productName]}ta.`;
+  }
+}
+
+const shop = new Shop(4, 5, 2);
+console.log(shop.qoldiq()); 
+
+console.log(shop.sotish('non', 3));
+
+console.log(shop.qabul('cola', 4));
+
+console.log(shop.qoldiq());
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // B-TASK:
 /*
 Shunday function tuzing, u 1ta string parametrga ega bolsin, hamda osha 
@@ -5,50 +126,27 @@ stringda qatnashgan raqamlarni sonini bizga return qilsin.
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
  */
 
-//Define
-function countDigits(str) {
-    let arr = str.split("");
-    const raqam = arr.filter((ele) => {
-        return ele == 0 || 
-        ele == 1 || 
-        ele == 2 || 
-        ele == 3 || 
-        ele == 4 || 
-        ele == 5 || 
-        ele == 6 || 
-        ele == 7 || 
-        ele == 8 || 
-        ele == 9;
-      });
-    console.log("Raqam",raqam.length);
+// //Define
+// function countDigits(str) {
+//     let arr = str.split("");
+//     const raqam = arr.filter((ele) => {
+//         return ele == 0 || 
+//         ele == 1 || 
+//         ele == 2 || 
+//         ele == 3 || 
+//         ele == 4 || 
+//         ele == 5 || 
+//         ele == 6 || 
+//         ele == 7 || 
+//         ele == 8 || 
+//         ele == 9;
+//       });
+//     console.log("Raqam",raqam.length);
 
-};
+// };
 
-//Call
-countDigits("ad2a54y79wet0sfgb9");
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// //Call
+// countDigits("ad2a54y79wet0sfgb9");
 
 
 
