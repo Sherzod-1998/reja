@@ -46,91 +46,40 @@ document.addEventListener("click", function(e){
     }
   }
 
-//edit operation
- if(e.target.classList.contains("edit-me")) {
-   alert("siz edit tugmasini bosdingiz");
-  }
+  if (e.target.classList.contains("edit-me")) {
+    let userInput = prompt(
+        "O'zgartirish kiriting",
+        e.target.parentElement.parentElement.querySelector(".item-text").innerHTML
+    );
+
+    if (userInput) {
+        axios
+            .post("/edit-item", {
+                id: e.target.getAttribute("data-id"),
+                new_input: userInput,
+            })
+            .then((response) => {
+                console.log(response.data);
+                e.target.parentElement.parentElement.querySelector(".item-text").innerHTML = userInput;
+            })
+            .catch((err) => {
+                console.error("Iltimos qaytadan harakat qiling!");
+            });
+    }
+}
+
+
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// const { response } = require("../app");
-
-// console.log("Frontend js ishga tushdi");
-
-// function itemTemplate (item) {
-//     return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
-//                         <span class="iten-text">${item.reja}</span>
-//                         <div>
-//                             <button data-id="${item._id}" class="edite-me btn btn-secondary btn-sm mr-1">
-//                                 O'zgartirish
-//                             </button>
-//                             <button data-id="${item._id}" class="delete-me btn btn-danger btn-sm">
-//                                 O'chirish
-//                             </button>
-//                         </div>
-//                     </li>`;
-// }
-
-// let createField = document.getElementById("create-field");
-// document.getElementById("create-form").addEventListener("submit", function (e) {
-//     e.preventDefault();
-//     axios
-//         .post("/create-item", {reja: createField.value})
-//         .then((response) => {
-//             document
-//             .getElementById("item-list")
-//             .insertAdjacentElement("beforeend", itemTemplate);
-//             createField = "";
-//             createField.focus();
-//         })
-//         .catch((err) => {
-//             console.log("Iltimos qaytadan harakat qiling");
-//         });
-
-// });
-
-// document.addEventListener("click", function (e) {
-//     //delete operator
-//     console.log("Click event ishladi", e.target);
-
-//     if(e.target.classList.contains("delete-me")) {
-//         if(confirm("Aniq o`chirmoqchimisiz?")) {
-//             alert("Yes");
-//         }
-//     }
-
-
-
-
-
-//     //edit operator
-
-
-
-// })
- 
+document.getElementById("clean-all").addEventListener("click", function () {
+  axios
+      .post("/delete-all", { delete_all: true })
+      .then((response) => {
+          alert(response.data.state);
+          document.location.reload();
+      })
+      .catch((err) => {
+          console.error("An error occurred:", err);
+          alert("Something went wrong. Please try again.");
+      });
+});

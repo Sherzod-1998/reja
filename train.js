@@ -1,3 +1,39 @@
+// D-TASK: 
+
+// Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
+// MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
+
+function tekshir(a, b) {
+    let aa = a.toLowerCase().split('').sort().join('');
+    let bb = b.toLowerCase().split('').sort().join('');
+    return aa === bb;
+};
+
+console.log(tekshir("mitgroup", "gmtiprou"));
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 // C-TASK;
 /**
  Shunday class tuzing tuzing nomi Shop, va uni constructoriga 
@@ -8,105 +44,46 @@ MASALAN: const shop = new Shop(4, 5, 2); shop.qoldiq() return hozir 20:40da 4ta 
 
  */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-class Shop {
-  constructor(non, lagmon, cola) {
-    this.products = {
-      non: non,       
-      lagmon: lagmon, 
-      cola: cola
-    };
-  }
-
-  qoldiq() {
-    const now = new Date();
-    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
-    return `Hozir ${time}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`;
-  }
-
-  sotish(productName, quantity) {
-    this.products[productName] -= quantity;
-    const now = new Date();
-    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
-
-    return `Hozir ${time}da ${quantity}ta ${productName} sotildi. Qoldiq: ${this.products[productName]}ta.`;
-  }
-
-  qabul(productName, quantity) {
-    this.products[productName] += quantity;
-    const now = new Date();
-    const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
-
-    return `Hozir ${time}da ${quantity}ta ${productName} qabul qilindi. Qoldiq: ${this.products[productName]}ta.`;
-  }
-}
-
-const shop = new Shop(4, 5, 2);
-console.log(shop.qoldiq()); 
-
-console.log(shop.sotish('non', 3));
-
-console.log(shop.qabul('cola', 4));
-
-console.log(shop.qoldiq());
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// class Shop {
+//   constructor(non, lagmon, cola) {
+//     this.products = {
+//       non: non,       
+//       lagmon: lagmon, 
+//       cola: cola
+//     };
+//   }
+
+//   qoldiq() {
+//     const now = new Date();
+//     const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+//     return `Hozir ${time}da ${this.products.non}ta non, ${this.products.lagmon}ta lagmon va ${this.products.cola}ta cola mavjud!`;
+//   }
+
+//   sotish(productName, quantity) {
+//     this.products[productName] -= quantity;
+//     const now = new Date();
+//     const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+//     return `Hozir ${time}da ${quantity}ta ${productName} sotildi. Qoldiq: ${this.products[productName]}ta.`;
+//   }
+
+//   qabul(productName, quantity) {
+//     this.products[productName] += quantity;
+//     const now = new Date();
+//     const time = `${now.getHours()}:${String(now.getMinutes()).padStart(2, '0')}`;
+
+//     return `Hozir ${time}da ${quantity}ta ${productName} qabul qilindi. Qoldiq: ${this.products[productName]}ta.`;
+//   }
+// }
+
+// const shop = new Shop(4, 5, 2);
+// console.log(shop.qoldiq()); 
+
+// console.log(shop.sotish('non', 3));
+
+// console.log(shop.qabul('cola', 4));
+
+// console.log(shop.qoldiq());
 
 
 
@@ -126,7 +103,7 @@ stringda qatnashgan raqamlarni sonini bizga return qilsin.
 MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
  */
 
-// //Define
+//Define
 // function countDigits(str) {
 //     let arr = str.split("");
 //     const raqam = arr.filter((ele) => {
@@ -147,6 +124,7 @@ MASALAN countDigits("ad2a54y79wet0sfgb9") 7ni return qiladi.
 
 // //Call
 // countDigits("ad2a54y79wet0sfgb9");
+
 
 
 
