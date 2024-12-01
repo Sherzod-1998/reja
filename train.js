@@ -1,15 +1,37 @@
+// E-TASK: 
+
+// Shunday function tuzing, u bitta string argumentni qabul qilib o'sha stringni teskari qilib return qilsin.
+
+// MASALAN: getReverse("hello") return qilsin "olleh"
+
+function reverseString(str) {
+    return str.split('').reverse().join('');
+}
+
+console.log(reverseString("hello"));
+
+
+
+
+
+
+
+
+
+
+
 // D-TASK: 
 
 // Shunday function tuzing, u 2ta string parametr ega bolsin, hamda agar har ikkala string bir hil harflardan iborat bolsa true aks holda false qaytarsin
 // MASALAN checkContent("mitgroup", "gmtiprou") return qiladi true;
 
-function tekshir(a, b) {
-    let aa = a.toLowerCase().split('').sort().join('');
-    let bb = b.toLowerCase().split('').sort().join('');
-    return aa === bb;
-};
+// function tekshir(a, b) {
+//     let aa = a.toLowerCase().split('').sort().join('');
+//     let bb = b.toLowerCase().split('').sort().join('');
+//     return aa === bb;
+// };
 
-console.log(tekshir("mitgroup", "gmtiprou"));
+// console.log(tekshir("mitgroup", "gmtiprou"));
 
 
 
